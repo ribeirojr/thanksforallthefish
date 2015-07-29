@@ -13,5 +13,9 @@ def GetAllThanksFromDb():
 	result += "</ul>"
 	return result
 
+@app.route("/insert", methods=['POST'])
+def Insert():
+	InsertThanks(request.email, request.message)
+
 if __name__ == "__main__":
-	app.run()
+	app.run(host='0.0.0.0')
