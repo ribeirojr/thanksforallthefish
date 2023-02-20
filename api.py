@@ -8,7 +8,7 @@ insertThanks('test', 'thanks mate')
 @app.route("/")
 def GetAllThanksFromDb():
 	result = "<ul>"
-	for thanks in GetAllThanks():
+	for thanks in get_all_thanks():
 		result += "<li>" + thanks.message + "</li>"
 	result += "</ul>"
 	return result
